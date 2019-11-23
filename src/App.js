@@ -3,6 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import Example from './components/widget1/widget1';
 import Widget2 from './components/widget2/widget2';
+import Widget3 from './components/widget3/widget3';
+import Widget4 from './components/widget4/Widget4';
+import Widget5 from './components/widget5/Widget5';
+import Widget6 from './components/widget6/Widget6';
 import Nav from './components/NavBar/Nav';
 
 
@@ -40,22 +44,22 @@ class Container extends React.Component{
         },
         {
           nom : "Qualité de la Consultation",
-          graph:  "graph",
+          graph:  <Widget3/>,
           
         },
         {
           nom : "Qualité de l'Environnement",
-          graph:  "graph",
+          graph:  <Widget4/>,
           
         },
         {
           nom : "Bien Etre Animal",
-          graph:  "graph",
+          graph:  <Widget5/>,
           
         },
         {
           nom : "Bien Etre Client",
-          graph:  "graph",
+          graph:  <Widget6/>,
           
         },
         
@@ -108,10 +112,18 @@ class Container extends React.Component{
                 graph={this.state.profile[this.state.show_profile].graph}
             />
           </div>
+          Net Promoting Score
           <Example/>
+          Satisfaction/Insatisfaction
           <Widget2/>
-           
-          
+          Qualité de la Consultation 
+          <Widget3/>
+          Qualité de l'Environnement 
+          <Widget4/>
+          Bien Etre Animal 
+          <Widget5/>
+          Bien Etre Client
+          <Widget6/>
          
          
           
