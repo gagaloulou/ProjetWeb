@@ -8,6 +8,7 @@ import Widget4 from './components/widget4/Widget4';
 import Widget5 from './components/widget5/Widget5';
 import Widget6 from './components/widget6/Widget6';
 import Nav from './components/NavBar/Nav';
+import Widget1 from './components/widget1/widget1';
 
 
 
@@ -34,7 +35,7 @@ class Container extends React.Component{
       profile : [
         {
           nom : "Net Promoting Score",
-          graph:  <Example/>,
+          graph:  <Widget1/>,
           
         },
         {
@@ -113,7 +114,7 @@ class Container extends React.Component{
             />
           </div>
           Net Promoting Score
-          <Example/>
+          <Widget1/>
           Satisfaction/Insatisfaction
           <Widget2/>
           Qualité de la Consultation 

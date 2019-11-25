@@ -5,23 +5,15 @@ import {
 
 const data = [
   {
-    subject: 'Math', A: 120, B: 110, fullMark: 150,
+    subject: '1er Trimestre', A: 90, B: 110, fullMark: 150,
   },
   {
-    subject: 'Chinese', A: 98, B: 130, fullMark: 150,
+    subject: '2nd Trimestre', A: 80, B: 130, fullMark: 150,
   },
   {
-    subject: 'English', A: 86, B: 130, fullMark: 150,
+    subject: '3ème Trimestre', A: 70, B: 130, fullMark: 150,
   },
-  {
-    subject: 'Geography', A: 99, B: 100, fullMark: 150,
-  },
-  {
-    subject: 'Physics', A: 85, B: 90, fullMark: 150,
-  },
-  {
-    subject: 'History', A: 65, B: 85, fullMark: 150,
-  },
+ 
 ];
 
 export default class Widget3 extends PureComponent {
