@@ -1,25 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Example from './components/widget1/widget1';
+import Widget1 from './components/widget1/widget1';
 import Widget2 from './components/widget2/widget2';
 import Widget3 from './components/widget3/widget3';
 import Widget4 from './components/widget4/Widget4';
 import Widget5 from './components/widget5/Widget5';
 import Widget6 from './components/widget6/Widget6';
 import Nav from './components/NavBar/Nav';
-import Widget1 from './components/widget1/widget1';
-
+import { Button, Col, Row} from 'reactstrap';
 
 
 class NavBar extends React.Component {
   render() {
       return(
-       
-          <button onClick={this.props.onClick}>
-              {this.props.nom}
-          </button>
-        
+          <div >
+            <Button outline color="secondary" onClick={this.props.onClick} size="lg" style={{backgroundColor:"#FFD4CA"}}>{this.props.nom}</Button>{' '}
+         
+        </div>
           
           
       );
@@ -34,17 +32,17 @@ class Container extends React.Component{
     this.state = {
       profile : [
         {
-          nom : "Net Promoting Score",
+          nom : "Humidité",
           graph:  <Widget1/>,
           
         },
         {
-          nom : "Satisfaction/Insatisfaction",
+          nom : "Température",
           graph:  <Widget2/>,
           
         },
         {
-          nom : "Qualité de la Consultation",
+          nom : "Pollution de l'air",
           graph:  <Widget3/>,
           
         },
@@ -81,9 +79,13 @@ class Container extends React.Component{
     return(
         <body className="Container">
           <header>
-            <nav className="navbar1">
+            <Row>
+              <Col xs="12" style={{backgroundColor:"#FFD4CA"}}>
+            
               QUALITE DE RELATION DES EQUIPES VETERINAIRES FRANCAISES DEPUIS 2018
-            </nav>
+            
+            </Col>
+            </Row>
             <nav className="navbar">
               <Nav/>
               <NavBar
@@ -113,18 +115,27 @@ class Container extends React.Component{
                 graph={this.state.profile[this.state.show_profile].graph}
             />
           </div>
-          Net Promoting Score
-          <Widget1/>
-          Satisfaction/Insatisfaction
-          <Widget2/>
-          Qualité de la Consultation 
-          <Widget3/>
-          Qualité de l'Environnement 
-          <Widget4/>
-          Bien Etre Animal 
-          <Widget5/>
-          Bien Etre Client
-          <Widget6/>
+          <Row>
+        <Col xs="6" sm="4">Net Promoting Score
+          <Widget1/></Col>
+        <Col xs="6" sm="3">Satisfaction/Insatisfaction
+          <Widget2/></Col>
+        <Col sm="5">Qualité de la Consultation 
+          <Widget3/></Col>
+      </Row>
+          
+      <Row>
+        <Col xs="6" sm="4">Qualité de l'Environnement 
+          <Widget4/></Col>
+        <Col xs="6" sm="4">Bien Etre Animal 
+          <Widget5/></Col>
+        <Col sm="4">Bien Etre Client
+          <Widget6/></Col>
+      </Row>
+          
+          
+          
+          
          
          
           
@@ -142,22 +153,9 @@ class Profile extends React.Component {
       }
   }
 
-  handleClick = (e) => {
-      if (this.state.bgColor === "cornflowerblue") {
-          this.setState({
-              bgColor: "white"
-          })
-      } else {
-        this.setState({
-          bgColor: "pink"
-      })
-      }
-      
-  }
-
-  render() {
+    render() {
     return(
-        <div className="profil1" style={{backgroundColor: this.state.bgColor}}>
+        <div className="profil1" >
             <div className="Biographie">
                 <a>{this.props.nom}</a>
                 <a>{this.props.graph}</a>
