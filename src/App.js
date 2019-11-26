@@ -155,7 +155,7 @@ class Profile extends React.Component {
 
     render() {
     return(
-        <div className="profil1" >
+        <div className="cadre" >
             <div className="Biographie">
                 <a>{this.props.nom}</a>
                 <a>{this.props.graph}</a>
