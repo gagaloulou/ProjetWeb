@@ -8,6 +8,8 @@ import Widget4 from './components/widget4/Widget4';
 import Widget5 from './components/widget5/Widget5';
 import Widget6 from './components/widget6/Widget6';
 import Nav from './components/NavBar/Nav';
+
+
 import { Button, Col, Row} from 'reactstrap';
 
 
@@ -15,7 +17,7 @@ class NavBar extends React.Component {
   render() {
       return(
           <div >
-            <Button outline color="secondary" onClick={this.props.onClick} size="lg" style={{backgroundColor:"#FFD4CA"}}>{this.props.nom}</Button>{' '}
+            <Button outline color="White" onClick={this.props.onClick} size="lg" style={{backgroundColor:"#941701",color: "white"}}>{this.props.nom}</Button>{' '}
          
         </div>
           
@@ -47,17 +49,17 @@ class Container extends React.Component{
           
         },
         {
-          nom : "Qualité de l'Environnement",
+          nom : "Widget 4",
           graph:  <Widget4/>,
           
         },
         {
-          nom : "Bien Etre Animal",
+          nom : "Widget 5",
           graph:  <Widget5/>,
           
         },
         {
-          nom : "Bien Etre Client",
+          nom : "Widget 6",
           graph:  <Widget6/>,
           
         },
@@ -80,10 +82,8 @@ class Container extends React.Component{
         <body className="Container">
           <header>
             <Row>
-              <Col xs="12" style={{backgroundColor:"#FFD4CA"}}>
-            
-              QUALITE DE RELATION DES EQUIPES VETERINAIRES FRANCAISES DEPUIS 2018
-            
+              <Col xs="12"  >
+              <div className="navbar1">DASHBOARD POUR CAPTEURS DANS UNE MAISON</div>
             </Col>
             </Row>
             <nav className="navbar">
@@ -109,27 +109,35 @@ class Container extends React.Component{
             </nav>
             
           </header>
+          <div className="body">
           <div className="profile">
             <Profile
                 nom={this.state.profile[this.state.show_profile].nom}
                 graph={this.state.profile[this.state.show_profile].graph}
             />
           </div>
+          <div className="basdepage">
           <Row>
-        <Col xs="6" sm="4">Net Promoting Score
+        <Col xs="6" sm="4">
+          <div className="titre">Net Promoting Score</div>
           <Widget1/></Col>
-        <Col xs="6" sm="3">Satisfaction/Insatisfaction
+        <Col xs="6" sm="3">
+        <div className="titre">Satisfaction/Insatisfaction</div>
           <Widget2/></Col>
-        <Col sm="5">Qualité de la Consultation 
+        <Col sm="5">
+        <div className="titre">Qualité de la Consultation </div>
           <Widget3/></Col>
       </Row>
           
       <Row>
-        <Col xs="6" sm="4">Qualité de l'Environnement 
+        <Col xs="6" sm="4">
+        <div className="titre">Widget 4 </div>
           <Widget4/></Col>
-        <Col xs="6" sm="4">Bien Etre Animal 
+        <Col xs="6" sm="4">
+        <div className="titre">Widget 5 </div>
           <Widget5/></Col>
-        <Col sm="4">Bien Etre Client
+        <Col sm="4">
+        <div className="titre">Widget 6</div>
           <Widget6/></Col>
       </Row>
           
@@ -137,8 +145,8 @@ class Container extends React.Component{
           
           
          
-         
-          
+       </div>  
+       </div>   
         </body>
     );
   }

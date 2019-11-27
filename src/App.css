@@ -26,40 +26,54 @@
   height: 10%;
 }
 .navbar1 {
-  background-color: rgb(245, 245, 210);
+  background-color: #941701;
   display: flex;
   text-align: center;
   font-size: xx-large;
+  color: white;
+  height: 50px;
 }
 
 
 .navbar {
-  background-color:#C7CDFF ;
+  background-color:#C9C9C9 ;
   display: flex;
+  height: 70px;
 
 }
 
 
-
-
+.body{
+  background-color: #8d8b8b;
+}
+.basdepage{
+  margin-top: 30px;
+}
 
 .profile{
   flex-flow: column;
   background-color: white;
   display: flex;
+  background-color: #8d8b8b;
 }
 
 .cadre{
   border: solid;
-  background-color: white;
+  background-color: #C9C9C9 ;
   display: flex;
   flex-flow: column;
   margin-left: 25%;
   margin-right: 25%;
+  margin-top: 20px;
 }
 
 
-
+.titre{
+  font-size: x-large;
+  font-style: normal;
+  color: white;
+  text-align: center;
+}
 
 
 .Biographie{

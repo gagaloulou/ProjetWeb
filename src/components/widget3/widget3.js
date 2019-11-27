@@ -31,9 +31,9 @@ export default class Widget3 extends PureComponent {
     return (
       <RadarChart cx={300} cy={250} outerRadius={150} width={500} height={500} data={data}>
         <PolarGrid />
-        <PolarAngleAxis dataKey="subject" />
+        <PolarAngleAxis dataKey="subject" stroke="white" />
         <PolarRadiusAxis />
-        <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
+        <Radar name="Mike" dataKey="A" stroke="white" fill="white" fillOpacity={0.6} />
       </RadarChart>
     );
   }

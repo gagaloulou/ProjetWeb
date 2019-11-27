@@ -60,15 +60,15 @@ export default class Widget4 extends PureComponent {
     return (
       <BarChart
         width={500}
-        height={300}
+        height={400}
         data={data}
         margin={{
           top: 20, right: 30, left: 20, bottom: 5,
         }}
       >
         <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="name" />
-        <YAxis />
+        <XAxis dataKey="name" stroke="white"/>
+        <YAxis stroke="white" />
         <Bar dataKey="female" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
           {
             data.map((entry, index) => (

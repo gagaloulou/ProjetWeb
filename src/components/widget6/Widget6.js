@@ -27,9 +27,9 @@ export default class Widget6 extends PureComponent {
         }}
       >
         <CartesianGrid />
-        <XAxis type="number" dataKey="x" name="stature" unit="cm" />
-        <YAxis type="number" dataKey="y" name="weight" unit="kg" />
-        <ZAxis type="number" dataKey="z" range={[60, 400]} name="score" unit="km" />
+        <XAxis type="number" dataKey="x" name="stature" unit="cm" stroke="white" />
+        <YAxis type="number" dataKey="y" name="weight" unit="kg" stroke="white" />
+        <ZAxis type="number" dataKey="z" range={[60, 400]} name="score" unit="km" stroke="white" />
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <Legend />
         <Scatter name="A school" data={data01} fill="#8884d8" shape="star" />
