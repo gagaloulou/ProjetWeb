@@ -48,8 +48,8 @@ export default class Widget1 extends PureComponent {
       
                 <Tooltip />
                 <Legend />
-                <Line type="monotone" dataKey="pv" stroke="black" activeDot={{ r: 8 }} />
-                <Line type="monotone" dataKey="uv" stroke="green" />
+                <Line type="monotone" dataKey="pv" stroke="#941701" activeDot={{ r: 8 }} />
+                <Line type="monotone" dataKey="uv" stroke="white" />
             </LineChart>
         );
     }

@@ -8,6 +8,8 @@ import Widget4 from './components/widget4/Widget4';
 import Widget5 from './components/widget5/Widget5';
 import Widget6 from './components/widget6/Widget6';
 import Nav from './components/NavBar/Nav';
+import Formulaire from './formulaire';
+import { BrowserRouter, Route, Link } from "react-router-dom";
 
 
 import { Button, Col, Row} from 'reactstrap';
@@ -88,6 +90,9 @@ class Container extends React.Component{
             </Row>
             <nav className="navbar">
               <Nav/>
+              <BrowserRouter>
+                <Route path="/formulaire" component={Formulaire}/>
+            </BrowserRouter>
               <NavBar
                   nom={this.state.profile[0].nom}
                   onClick={() => this.handleClick(0)}/>
@@ -106,6 +111,9 @@ class Container extends React.Component{
               <NavBar
                   nom={this.state.profile[5].nom}
                   onClick={() => this.handleClick(5)}/>
+              <NavBar
+                  nom="Formulaire"
+                  onClick={Formulaire}/>
             </nav>
             
           </header>
@@ -119,13 +127,13 @@ class Container extends React.Component{
           <div className="basdepage">
           <Row>
         <Col xs="6" sm="4">
-          <div className="titre">Net Promoting Score</div>
+          <div className="titre">Humidité</div>
           <Widget1/></Col>
         <Col xs="6" sm="3">
-        <div className="titre">Satisfaction/Insatisfaction</div>
+        <div className="titre">Température</div>
           <Widget2/></Col>
         <Col sm="5">
-        <div className="titre">Qualité de la Consultation </div>
+        <div className="titre">Pollution de l'air </div>
           <Widget3/></Col>
       </Row>
           

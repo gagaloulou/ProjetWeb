@@ -1,11 +1,19 @@
 import React from "react";
-import Formulaire from './formulaire';
+
+import Container from "../../App";
+import { BrowserRouter, Route, Link } from "react-router-dom";
+
+
 
 export default ({ close }) => (
     <div className="menu">
         <ul>
-            <li onClick={close}>Menu</li>
-            <li onClick={<Formulaire/>}>Formulaire</li>
+            <BrowserRouter>
+            <Route exact path="/" component={Container}/>
+            <Route path="/formulaire" component={Container}/>
+            </BrowserRouter>
+            <Link to="/">Home</Link>
+            <Link to="/">Formulaire</Link>
             
         </ul>
     </div>

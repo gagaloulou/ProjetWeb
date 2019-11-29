@@ -6,7 +6,7 @@ import {
 import { scaleOrdinal } from 'd3-scale';
 import { schemeCategory10 } from 'd3-scale-chromatic';
 
-const colors = scaleOrdinal(schemeCategory10).range();
+const colors = ['#FFABAB','#FF7F7F', '#FF3C3C','FF1212','#DC3434','#941701','red'];;
 
 const data = [
   {
@@ -72,7 +72,7 @@ export default class Widget4 extends PureComponent {
         <Bar dataKey="female" fill="#8884d8" shape={<TriangleBar />} label={{ position: 'top' }}>
           {
             data.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={colors[index % 20]} />
+              <Cell key={`cell-${index}`} fill={colors[index % 50]} />
             ))
           }
         </Bar>

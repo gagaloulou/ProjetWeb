@@ -32,8 +32,8 @@ export default class Widget6 extends PureComponent {
         <ZAxis type="number" dataKey="z" range={[60, 400]} name="score" unit="km" stroke="white" />
         <Tooltip cursor={{ strokeDasharray: '3 3' }} />
         <Legend />
-        <Scatter name="A school" data={data01} fill="#8884d8" shape="star" />
-        <Scatter name="B school" data={data02} fill="#82ca9d" shape="triangle" />
+        <Scatter name="A school" data={data01} fill="#941701" shape="star" />
+        <Scatter name="B school" data={data02} fill="white" shape="triangle" />
       </ScatterChart>
     );
   }
